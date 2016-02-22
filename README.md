@@ -7,12 +7,9 @@ Apache Kafka samples. Following [Adictos al Trabajo - Primeros pasos con Apache 
 
 Start Kafka container
 
-    docker run -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST="172.17.0.1" --env ADVERTISED_PORT=9092 spotify/kafka
-
-
     docker run -d \
         -p 2181:2181 -p 9092:9092 \
-        --env ADVERTISED_HOST=192.168.1.37 \
+        --env ADVERTISED_HOST=localhost \
         --env ADVERTISED_PORT=9092 \
         flozano/kafka:0.9.0.0
 
@@ -22,6 +19,8 @@ y listo
 
 
 # Start a proxy
+
+Esto hay que estudiarlo bien...
 
     docker run -p 2181:2181 -p 9092:9092 \
         --env ADVERTISED_HOST=192.168.1.37 \
@@ -33,4 +32,3 @@ y listo
         spotify/kafkaproxy
 
 
-172.17.0.1
