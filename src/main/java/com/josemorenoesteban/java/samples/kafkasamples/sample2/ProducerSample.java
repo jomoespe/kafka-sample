@@ -10,8 +10,6 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 
 public class ProducerSample {
     
-    final static String MESSAGE = "{\"id\": %s, \"message\": \"%s\"}";
-    
     public static void main(String... args) throws InterruptedException {
         Properties props = new Properties();
         props.put("bootstrap.servers", KAFKA_SERVER);

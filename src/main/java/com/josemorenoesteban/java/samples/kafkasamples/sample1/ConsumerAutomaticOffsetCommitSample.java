@@ -23,7 +23,8 @@ public class ConsumerAutomaticOffsetCommitSample {
         consumer.subscribe(Arrays.asList(TOPIC));
         while (true) {
             consumer.poll(100).forEach((record) -> {
-                System.out.printf("Consumiing... offset = %d, key = %s, value = %s\n", record.offset(), record.key(), record.value());
+                System.out.printf("Consumiing... offset=%s, key=%s, value=%s\n", 
+                                  record.offset(), record.key(), record.value());
             });
         }
     }
